@@ -1,0 +1,31 @@
+stages:
+  - publish
+  - deploy
+
+publish:
+  stage: publish
+  only: 
+    - master
+  tags:
+    - shell
+  script: |
+    export DOCKER_BUILDKIT=1
+    docker build . -t docker.pkg.github.com/mat1g3r/peijun.dev/peijun.dev:$CI_COMMIT_SHA
+    echo $GH_PACKAGE_TOKEN | docker login docker.pkg.github.com -u MaT1g3R --password-stdin
+    docker push docker.pkg.github.com/mat1g3r/peijun.dev/peijun.dev:$CI_COMMIT_SHA
+
+deploy:
+  stage: deploy
+  only:
+    - master
+  tags:
+    - shell
+  script: |
+    git clone https://oauth2:$DEPLOY_TOKEN@gitlab.otonokizaka.moe/Umi/peijun.dev-deploy.git
+    git config --global user.email "peijun.ma@protonmail.com"
+    git config --global user.name "Peijun Ma"
+    cd peijun.dev-deploy
+    echo $CI_COMMIT_SHA > image-tag
+    git add image-tag
+    git commit -m "Deploy $CI_COMMIT_SHA"
+    git push
