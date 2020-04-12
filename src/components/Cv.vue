@@ -1,15 +1,22 @@
 <template>
   <div class="cv">
-    <h1>{{ msg }}</h1>
+    <div id="cv-body"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class Cv extends Vue {
-  @Prop() private msg!: string;
+  async beforeCreate() {
+    const resp = await this.$http.get("/static/peijun-ma-cv.html");
+    const data = await resp.text();
+    const el = document.getElementById("cv-body");
+    if (el) {
+      el.innerHTML = data;
+    }
+  }
 }
 </script>
 

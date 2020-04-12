@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Home msg="This is a home page" />
+    <Home />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="cv">
-    <Cv msg="This is a CV page"></Cv>
+    <Cv />
   </div>
 </template>
 

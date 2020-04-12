@@ -3,15 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cd latex/cv && make && cd ../.. && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@types/prismjs": "^1.16.0",
+    "@types/vue-markdown": "^2.2.1",
+    "babel-runtime": "^6.26.0",
     "core-js": "^3.6.4",
+    "html-loader": "^1.1.0",
+    "prismjs": "^1.20.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
+    "vue-markdown": "^2.2.4",
     "vue-property-decorator": "^8.4.1",
+    "vue-resource": "^1.5.1",
     "vue-router": "^3.1.6"
   },
   "devDependencies": {

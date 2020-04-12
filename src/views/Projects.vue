@@ -1,6 +1,6 @@
 <template>
   <div class="cv">
-    <Projects msg="This is a projects page"></Projects>
+    <Projects />
   </div>
 </template>
 
