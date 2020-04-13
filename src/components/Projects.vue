@@ -1,20 +1,24 @@
 <template>
-  <div class="projects">
-    <h1>
-      I have worked on a variety of different open source projects over the
-      years, here is a selection of the ones that I find interesting.
-    </h1>
-    <h2>
-      For my complete public portfolio, please see my
-      <a href="https://gitlab.otonokizaka.moe/Umi">GitLab</a> and
-      <a href="https://github.com/MaT1g3R">GitHub</a> profiles.
-    </h2>
-    <ul>
-      <li v-for="project in projects" :key="project.name">
-        <project :details="project" />
-      </li>
-    </ul>
-  </div>
+  <v-container class="projects">
+    <div id="projects-intro">
+      <p class="title">
+        I have worked on a variety of different open source projects over the
+        years, here is a selection of the ones that I find interesting.
+      </p>
+      <p class="subtitle-2">
+        For my complete public portfolio, please see my
+        <a href="https://gitlab.otonokizaka.moe/Umi">GitLab</a> and
+        <a href="https://github.com/MaT1g3R">GitHub</a> profiles.
+      </p>
+    </div>
+    <v-container fluid>
+      <v-row dense>
+        <v-col v-for="project in projects" :key="project.name">
+          <project :details="project" />
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-container>
 </template>
 
 <script lang="ts">

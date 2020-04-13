@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
 import VueResource from "vue-resource";
 
 Vue.use(VueRouter);
@@ -9,19 +8,26 @@ Vue.use(VueResource);
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
-    component: Home
-  },
-  {
-    path: "/projects",
-    name: "Projects",
-    component: () =>
-      import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
-  },
-  {
-    path: "/cv",
-    name: "Curriculum vitae",
-    component: () => import(/* webpackChunkName: "cv" */ "../views/Cv.vue")
+    component: () => import("../layouts/Index.vue"),
+    children: [
+      {
+        path: "",
+        name: "Home",
+        component: () =>
+          import(/* webpackChunkName: "home" */ "../views/Home.vue")
+      },
+      {
+        path: "projects",
+        name: "Projects",
+        component: () =>
+          import(/* webpackChunkName: "projects" */ "../views/Projects.vue")
+      },
+      {
+        path: "cv",
+        name: "Curriculum vitae",
+        component: () => import(/* webpackChunkName: "cv" */ "../views/Cv.vue")
+      }
+    ]
   }
 ];
 

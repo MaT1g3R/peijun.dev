@@ -1,14 +1,26 @@
 <template>
   <div class="home">
-    <div id="title">
-      <h1>Hi there, my name is Peijun</h1>
-      <h2>I'm software developer/SRE based in Toronto.</h2>
-      <a class="button" href="https://github.com/MaT1g3R">GitHub</a>
-      <a class="button" href="/static/peijun-ma-cv.pdf">Download CV</a>
+    <p class="text-center display-3">Hi there, my name is Peijun</p>
+    <p class="text-center headline">
+      I'm software developer/SRE based in Toronto.
+    </p>
+    <div id="links">
+      <v-btn href="https://github.com/MaT1g3R" target="_blank" rounded>
+        <i class="nf nf-oct-mark_github"></i>
+        GitHub
+      </v-btn>
+      <v-btn href="https://gitlab.otonokizaka.moe/Umi" target="_blank" rounded>
+        <i class="nf nf-fa-gitlab"></i>
+        GitLab
+      </v-btn>
+      <v-btn href="/static/peijun-ma-cv.pdf" target="_blank" rounded>
+        <i class="nf nf-fa-download"></i>
+        Download CV
+      </v-btn>
     </div>
-    <div id="about-me">
+    <div id="about-me" class="body-1">
       <div>
-        <h2>About Me</h2>
+        <h3 class="title">About Me</h3>
         <p>
           I am currently finishing my undergrad in computer science at
           <a href="https://web.cs.toronto.edu/">University of Toronto</a>, and
@@ -40,7 +52,7 @@
         </ul>
       </div>
       <div>
-        <h2>Free Software</h2>
+        <h3 class="title">Free Software</h3>
         <p>
           I am a frequent contributor to the free software community. I believe
           we should give back to the community whenever possible, as they serve
@@ -55,7 +67,7 @@
         </p>
       </div>
       <div>
-        <h2>Linux</h2>
+        <h3 class="title">Linux</h3>
         <p>
           I have been a full time Linux user since 2016, I use Linux mainly due
           to the fact that it respects the user's
@@ -84,11 +96,14 @@ export default class Home extends Vue {}
 </script>
 
 <style scoped lang="scss">
-#title {
-  text-align: center;
+.nf {
+  font-size: 2rem;
+  width: 2rem;
+  margin-right: 0.15rem;
+  text-align: left;
 }
-
-#about-me {
-  margin-left: 10%;
+#links {
+  display: flex;
+  justify-content: center;
 }
 </style>

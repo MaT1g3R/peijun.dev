@@ -1,6 +1,6 @@
 <template>
   <div class="cv">
-    <div id="cv-body"></div>
+    <v-container id="cv-body" class="body-1"></v-container>
   </div>
 </template>
 
@@ -15,6 +15,14 @@ export default class Cv extends Vue {
     const el = document.getElementById("cv-body");
     if (el) {
       el.innerHTML = data;
+      const contact = el.getElementsByTagName("table")[0];
+      if (contact) {
+        contact.style.marginBottom = "5px";
+      }
+      const rows = el.querySelectorAll("td > span");
+      Array.prototype.slice
+        .call(rows)
+        .forEach(row => (row.style.marginRight = "5px"));
     }
   }
 }
