@@ -8,6 +8,4 @@
 export default { name: "App" };
 </script>
 
-<style lang="scss">
-@import url(assets/css/nerd-fonts-generated.css);
-</style>
+<style lang="scss"></style>

@@ -8,9 +8,9 @@
         <v-list-item-subtitle>{{ details.description }}</v-list-item-subtitle>
       </v-list-item-content>
 
-      <v-list-item-avatar size="30">
-        <v-btn text :href="details.link" target="_blank">
-          <i class="nf nf-fa-external_link"></i>
+      <v-list-item-avatar>
+        <v-btn fab :href="details.link" target="_blank">
+          <v-icon class="fa fa-external-link-alt"></v-icon>
         </v-btn>
       </v-list-item-avatar>
     </v-list-item>
@@ -35,10 +35,4 @@ export default class Project extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-.nf {
-  font-size: 1.2rem;
-  width: 1.2rem;
-  text-align: left;
-}
-</style>
+<style scoped lang="scss"></style>

@@ -1,7 +1,7 @@
 <template>
   <v-container class="cv">
     <v-btn href="/static/peijun-ma-cv.pdf" target="_blank" rounded>
-      <i class="nf nf-fa-download"></i>
+      <v-icon left class="fa fa-download"></v-icon>
       Download printable
     </v-btn>
     <v-container id="cv-body" class="body-1"></v-container>
@@ -32,10 +32,4 @@ export default class Cv extends Vue {
 }
 </script>
 
-<style scoped lang="scss">
-.nf {
-  font-size: 1rem;
-  width: 1rem;
-  margin-right: 0.2rem;
-}
-</style>
+<style scoped lang="scss"></style>

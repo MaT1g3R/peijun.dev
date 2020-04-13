@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <v-container class="home">
       <p class="text-center display-3">Hi there, my name is Peijun</p>
       <p class="text-center headline">
@@ -9,7 +9,7 @@
         <v-row align="center" justify="center">
           <v-col cols="auto">
             <v-btn href="https://github.com/MaT1g3R" target="_blank" rounded>
-              <i class="nf nf-oct-mark_github"></i>
+              <v-icon left class="fab fa-github"></v-icon>
               GitHub
             </v-btn>
           </v-col>
@@ -19,20 +19,20 @@
               target="_blank"
               rounded
             >
-              <i class="nf nf-fa-gitlab"></i>
+              <v-icon left class="fab fa-gitlab"></v-icon>
               GitLab
             </v-btn>
           </v-col>
           <v-col cols="auto">
             <v-btn href="/static/peijun-ma-cv.pdf" target="_blank" rounded>
-              <i class="nf nf-fa-download"></i>
+              <v-icon left class="fa fa-download"></v-icon>
               Download CV
             </v-btn>
           </v-col>
         </v-row>
       </v-container>
-      <v-container id="about-me" class="body-1">
-        <v-container>
+      <div id="about-me" class="body-1">
+        <div>
           <h3 class="title">About Me</h3>
           <p>
             I am currently finishing my undergrad in computer science at
@@ -63,8 +63,8 @@
               <a href="https://kubernetes.io/">Kubernetes</a>
             </li>
           </ul>
-        </v-container>
-        <v-container>
+        </div>
+        <div>
           <h3 class="title">Free Software</h3>
           <p>
             I am a frequent contributor to the free software community. I
@@ -78,8 +78,8 @@
             <a href="https://github.com/python/cpython">Python</a>, and
             <a href="https://github.com/hashicorp/terraform">Terraform</a>.
           </p>
-        </v-container>
-        <v-container>
+        </div>
+        <div>
           <h3 class="title">Linux</h3>
           <p>
             I have been a full time Linux user since 2016, I use Linux mainly
@@ -97,10 +97,10 @@
             >. I run a homelab (fancy word for a bunch of servers at home)
             that's based around Linux and BSDs, stay tuned for more details.
           </p>
-        </v-container>
-      </v-container>
+        </div>
+      </div>
     </v-container>
-  </v-container>
+  </div>
 </template>
 
 <script lang="ts">
@@ -110,11 +110,4 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Home extends Vue {}
 </script>
 
-<style scoped lang="scss">
-.nf {
-  font-size: 2rem;
-  width: 2rem;
-  margin-right: 0.15rem;
-  text-align: left;
-}
-</style>
+<style scoped lang="scss"></style>
