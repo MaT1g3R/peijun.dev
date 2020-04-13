@@ -5,23 +5,31 @@
       <p class="text-center headline">
         I'm software developer/SRE based in Toronto.
       </p>
-      <v-container id="links">
-        <v-btn href="https://github.com/MaT1g3R" target="_blank" rounded>
-          <i class="nf nf-oct-mark_github"></i>
-          GitHub
-        </v-btn>
-        <v-btn
-          href="https://gitlab.otonokizaka.moe/Umi"
-          target="_blank"
-          rounded
-        >
-          <i class="nf nf-fa-gitlab"></i>
-          GitLab
-        </v-btn>
-        <v-btn href="/static/peijun-ma-cv.pdf" target="_blank" rounded>
-          <i class="nf nf-fa-download"></i>
-          Download CV
-        </v-btn>
+      <v-container id="links" fluid>
+        <v-row align="center" justify="center">
+          <v-col cols="auto">
+            <v-btn href="https://github.com/MaT1g3R" target="_blank" rounded>
+              <i class="nf nf-oct-mark_github"></i>
+              GitHub
+            </v-btn>
+          </v-col>
+          <v-col cols="auto">
+            <v-btn
+              href="https://gitlab.otonokizaka.moe/Umi"
+              target="_blank"
+              rounded
+            >
+              <i class="nf nf-fa-gitlab"></i>
+              GitLab
+            </v-btn>
+          </v-col>
+          <v-col cols="auto">
+            <v-btn href="/static/peijun-ma-cv.pdf" target="_blank" rounded>
+              <i class="nf nf-fa-download"></i>
+              Download CV
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-container>
       <v-container id="about-me" class="body-1">
         <v-container>
@@ -108,9 +116,5 @@ export default class Home extends Vue {}
   width: 2rem;
   margin-right: 0.15rem;
   text-align: left;
-}
-#links {
-  display: flex;
-  justify-content: center;
 }
 </style>
