@@ -1,6 +1,6 @@
 <template>
   <v-container class="projects">
-    <div id="projects-intro">
+    <v-container id="projects-intro">
       <p class="title">
         I have worked on a variety of different open source projects over the
         years, here is a selection of the ones that I find interesting.
@@ -10,7 +10,7 @@
         <a href="https://gitlab.otonokizaka.moe/Umi">GitLab</a> and
         <a href="https://github.com/MaT1g3R">GitHub</a> profiles.
       </p>
-    </div>
+    </v-container>
     <v-container fluid>
       <v-row dense>
         <v-col v-for="project in projects" :key="project.name">
