@@ -2,8 +2,8 @@
   <v-container class="projects">
     <div id="projects-intro">
       <p class="title">
-        I have worked on a variety of different open source projects over the
-        years, here is a selection of the ones that I find interesting.
+        I have worked on a variety of different projects over the years, here is
+        a selection of the ones that I find interesting.
       </p>
       <p class="subtitle-2">
         For my complete public portfolio, please see my
