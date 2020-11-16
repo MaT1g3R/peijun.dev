@@ -1,26 +1,26 @@
 <template>
-  <v-card class="project mx-auto" outlined width="355" height="170">
-    <v-list-item three-line>
-      <v-list-item-content>
-        <v-list-item-title class="headline mb-1">
-          {{ details.name }}
-        </v-list-item-title>
-        <v-list-item-subtitle>{{ details.description }}</v-list-item-subtitle>
-      </v-list-item-content>
-
-      <v-list-item-avatar>
-        <v-btn fab :href="details.link" target="_blank">
-          <v-icon class="fa fa-external-link-alt"></v-icon>
-        </v-btn>
-      </v-list-item-avatar>
-    </v-list-item>
-
-    <v-card-actions>
+  <v-card class="project mx-auto" outlined width="355" height="260">
+    <v-card-title>
+      {{ details.name }}
+    </v-card-title>
+    <v-card-text>
+      <div>
+        {{ details.description }}
+      </div>
+    </v-card-text>
+    <v-divider class="mx-4"></v-divider>
+    <v-card-text class="keywords">
       <v-chip-group column>
         <v-chip v-for="word in details.keywords" :key="word" small>{{
           word
         }}</v-chip>
       </v-chip-group>
+    </v-card-text>
+
+    <v-card-actions class="project-actions">
+      <v-btn class="action-button" :to="{ path: slug }">
+        Learn More
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -32,7 +32,16 @@ import ProjectDetails from "./ProjectDetails";
 @Component
 export default class Project extends Vue {
   @Prop() details!: ProjectDetails;
+  slug = "portfolio/" + this.details.slug;
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.project {
+  display: flex;
+  flex-direction: column;
+}
+.project-actions {
+  margin-top: auto;
+}
+</style>

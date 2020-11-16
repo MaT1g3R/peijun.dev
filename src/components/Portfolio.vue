@@ -35,19 +35,19 @@ export default class Portfolio extends Vue {
   projects: ProjectDetails[] = [
     {
       name: "peijun.dev",
-      link: "https://gitlab.otonokizaka.moe/Umi/peijun.dev",
+      slug: "peijun-dev",
       description: "This website!",
       keywords: ["Vue", "Docker", "continuous-deployment"]
     },
     {
       name: "cloudflare-ddns",
-      link: "https://github.com/MaT1g3R/cloudflare-ddns",
+      slug: "cloudflare-ddns",
       description: "Update Cloudflare DNS records using Terraform",
       keywords: ["Terraform", "Cloudflare", "DNS"]
     },
     {
       name: "ohs",
-      link: "https://github.com/office-hour-scheduler/ohs",
+      slug: "ohs",
       description: "Schedule office hours with professors",
       keywords: [
         "Python",
@@ -60,19 +60,19 @@ export default class Portfolio extends Vue {
     },
     {
       name: "Option",
-      link: "https://github.com/MaT1g3R/option",
+      slug: "option",
       description: "Rust like Option and Result types in Python",
       keywords: ["functional-programming", "Python"]
     },
     {
       name: "musicview",
-      link: "https://github.com/MaT1g3R/musicview",
+      slug: "musicview",
       description: "A terminal music player",
       keywords: ["Python", "Ncurses", "multithreading"]
     },
     {
       name: "YasenBaka",
-      link: "https://github.com/MaT1g3R/YasenBaka",
+      slug: "yasen-baka",
       description: "Asynchronous chat bot",
       keywords: ["asyncio", "Python", "Docker"]
     }

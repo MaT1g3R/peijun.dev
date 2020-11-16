@@ -1,6 +1,6 @@
 export default interface ProjectDetails {
   name: string;
-  link: string;
+  slug: string;
   description: string;
   keywords: string[];
 }

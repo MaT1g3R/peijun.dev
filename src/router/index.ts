@@ -11,6 +11,13 @@ const routes: Array<RouteConfig> = [
     component: () => import("../layouts/Index.vue"),
     children: [
       {
+        path: "portfolio/:project",
+        component: () =>
+          import(
+            /* webpackChunkName: "projectDetail" */ "../views/ProjectDetail.vue"
+          )
+      },
+      {
         path: "",
         name: "Home",
         component: () =>

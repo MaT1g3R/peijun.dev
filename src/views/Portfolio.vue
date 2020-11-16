@@ -1,6 +1,6 @@
 <template>
-  <div class="cv">
-    <Projects />
+  <div class="portfolio">
+    <Portfolio />
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import Portfolio from "../components/Portfolio.vue";
 
 export default {
   components: {
-    Projects: Portfolio
+    Portfolio: Portfolio
   }
 };
 </script>
