@@ -14,7 +14,7 @@
         <v-col cols="auto">
           <v-tabs center-active show-arrows>
             <v-tab :to="{ path: '/' }">Home </v-tab>
-            <v-tab :to="{ path: '/projects' }">Projects </v-tab>
+            <v-tab :to="{ path: '/portfolio' }">Portfolio </v-tab>
             <v-tab :to="{ path: '/cv' }">Curriculum vitae </v-tab>
           </v-tabs>
         </v-col>

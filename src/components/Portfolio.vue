@@ -31,7 +31,7 @@ import ProjectDetails from "./ProjectDetails";
     Project
   }
 })
-export default class Projects extends Vue {
+export default class Portfolio extends Vue {
   projects: ProjectDetails[] = [
     {
       name: "peijun.dev",
