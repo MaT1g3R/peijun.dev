@@ -34,6 +34,13 @@ import ProjectDetails from "./ProjectDetails";
 export default class Portfolio extends Vue {
   projects: ProjectDetails[] = [
     {
+      name: "Smart EV Charging Station",
+      slug: "smart-ev-charging-station",
+      description:
+        "Data analytics and web dashboard for EV charging stations, for a capstone design course",
+      keywords: ["AWS", "Spark", "project-management"]
+    },
+    {
       name: "peijun.dev",
       slug: "peijun-dev",
       description: "This website!",

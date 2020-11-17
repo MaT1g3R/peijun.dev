@@ -1,17 +1,14 @@
 <template>
-  <div>
-    {{ $route.params.project }}
-  </div>
+  <component :is="$route.params.project"></component>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Project from "./Project.vue";
-import ProjectDetails from "./ProjectDetails";
+import SmartEVChargingStation from "@/components/project-pages/SmartEVChargingStation.vue";
 
 @Component({
   components: {
-    Project
+    "smart-ev-charging-station": SmartEVChargingStation
   }
 })
 export default class ProjectDetail extends Vue {}
