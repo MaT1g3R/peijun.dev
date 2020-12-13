@@ -8,26 +8,19 @@
       <v-container id="links" fluid>
         <v-row align="center" justify="center">
           <v-col cols="auto">
-            <v-btn href="https://github.com/MaT1g3R" target="_blank" rounded>
-              <v-icon left class="fab fa-github"></v-icon>
-              GitHub
-            </v-btn>
-          </v-col>
-          <v-col cols="auto">
-            <v-btn
-              href="https://gitlab.otonokizaka.moe/Umi"
-              target="_blank"
-              rounded
+            <IconButton href="https://github.com/MaT1g3R" icon="github"
+              >GitHub</IconButton
             >
-              <v-icon left class="fab fa-gitlab"></v-icon>
-              GitLab
-            </v-btn>
           </v-col>
           <v-col cols="auto">
-            <v-btn href="/static/peijun-ma-cv.pdf" target="_blank" rounded>
-              <v-icon left class="fa fa-download"></v-icon>
-              Download CV
-            </v-btn>
+            <IconButton href="https://gitlab.otonokizaka.moe/Umi" icon="gitlab"
+              >GitLab</IconButton
+            >
+          </v-col>
+          <v-col cols="auto">
+            <IconButton href="/static/peijun-ma-cv.pdf" icon="download" typ="fa"
+              >Download CV</IconButton
+            >
           </v-col>
         </v-row>
       </v-container>
@@ -105,8 +98,11 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import IconButton from "@/components/IconButton.vue";
 
-@Component({})
+@Component({
+  components: { IconButton }
+})
 export default class Home extends Vue {}
 </script>
 
