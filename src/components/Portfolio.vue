@@ -67,7 +67,7 @@ export default class Portfolio extends Vue {
     },
     {
       name: "Option",
-      slug: "option",
+      slug: "python-option",
       description: "Rust like Option and Result types in Python",
       keywords: ["functional-programming", "Python"]
     },
