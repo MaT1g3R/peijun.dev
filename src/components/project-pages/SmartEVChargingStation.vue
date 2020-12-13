@@ -19,16 +19,11 @@
         finish the constraints section assigned to me.
       </p>
       <h2 class="text-h4">Design proposal</h2>
-      <figure>
-        <img
-          class="opaque-background"
-          src="/static/high-level-overview.png"
-          alt="High level architecture overview"
-        />
-        <figcaption class="text-caption">
-          High level architecture overview
-        </figcaption>
-      </figure>
+      <ImageFigure
+        src="/static/high-level-overview.png"
+        caption="High level architecture overview"
+      >
+      </ImageFigure>
       <p class="text-body-1">
         The design proposal is the second document in line to be completed, and
         I took the job to design the overarching system architecture. I worked
@@ -46,16 +41,10 @@
         industry standard <a href="https://oauth.net/2/">OAuth 2.0</a> as its
         user authentication mechanism.
       </p>
-      <figure>
-        <img
-          class="opaque-background"
-          src="/static/auth.png"
-          alt="OAuth2.0 authentication flow"
-        />
-        <figcaption class="text-caption">
-          OAuth 2.0 authentication flow
-        </figcaption>
-      </figure>
+      <ImageFigure
+        src="/static/auth.png"
+        caption="OAuth2.0 authentication flow"
+      ></ImageFigure>
       <p class="text-body-1">
         The web backend would be implemented as a
         <a href="https://12factor.net/">Twelve-Factor</a> application, making it
@@ -63,16 +52,11 @@
         otherwise), and easy to maintain.
       </p>
       <h2 class="text-h4">Development methodologies</h2>
-      <figure>
-        <img
-          class="opaque-background"
-          src="/static/kanban.png"
-          alt="Kanban board"
-        />
-        <figcaption class="text-caption">
-          Kanban board
-        </figcaption>
-      </figure>
+
+      <ImageFigure
+        src="/static/kanban.png"
+        caption="Kanban board"
+      ></ImageFigure>
       <p class="text-body-1">
         For any project to succeed, it would need a solid project management
         plan. And we went with an
@@ -81,16 +65,10 @@
         vertical slices that works together. This ensures that the components of
         the system will always integrate with each other.
       </p>
-      <figure>
-        <img
-          class="opaque-background"
-          src="/static/ci-cd.png"
-          alt="CI/CD pipelines"
-        />
-        <figcaption class="text-caption">
-          CI/CD pipelines
-        </figcaption>
-      </figure>
+      <ImageFigure
+        src="/static/ci-cd.png"
+        caption="CI/CD pipelines"
+      ></ImageFigure>
       <p class="text-body-1">
         To further ensure the project development progress smoothly, I
         implemented CI/CD (continuous integration/delivery) pipelines for the
@@ -115,17 +93,10 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import ImageFigure from "@/components/project-pages/ImageFigure.vue";
 
-@Component({})
+@Component({
+  components: { ImageFigure }
+})
 export default class SmartEVChargingStation extends Vue {}
 </script>
-
-<style scoped>
-.opaque-background {
-  background-color: white;
-  max-width: 100%;
-}
-figure {
-  padding: 10px;
-}
-</style>

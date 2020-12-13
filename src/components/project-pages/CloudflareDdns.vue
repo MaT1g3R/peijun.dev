@@ -12,13 +12,3 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({})
 export default class CloudflareDdns extends Vue {}
 </script>
-
-<style scoped>
-.opaque-background {
-  background-color: white;
-  max-width: 100%;
-}
-figure {
-  padding: 10px;
-}
-</style>
