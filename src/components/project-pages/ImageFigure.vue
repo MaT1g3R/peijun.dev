@@ -20,7 +20,7 @@ export default class ImageFigure extends Vue {
 <style scoped>
 .opaque-background {
   background-color: white;
-  max-width: 100%;
+  max-width: 90%;
 }
 figure {
   padding: 10px;
