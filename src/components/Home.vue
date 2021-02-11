@@ -18,6 +18,13 @@
             >
           </v-col>
           <v-col cols="auto">
+            <IconButton
+              href="https://www.linkedin.com/in/peijun-ma"
+              icon="linkedin"
+              >LinkedIn</IconButton
+            >
+          </v-col>
+          <v-col cols="auto">
             <IconButton href="/static/peijun-ma-cv.pdf" icon="download" typ="fa"
               >Download CV</IconButton
             >
