@@ -16,92 +16,51 @@
 \rhead{}
 \lhead{\large{\textbf{Peijun Ma}}}
 
-\newcommand{\smallurl}[1]{\small{\url{#1}}}
+\newcommand{\smallurl}[1]{\scriptsize{\url{#1}}}
 
 \begin{document}
-
 \begin{tabular}{l l}
     Email: & \href{mailto:peijun.ma@pm.me}{peijun.ma@pm.me} \\
     Phone: & (902)-719-8619 \\
     Website: & \href{https://peijun.dev}{https://peijun.dev}
 \end{tabular}
 
+
 \noindent \begin{longtable}{@{} l p{14cm}}
-\Large{Education} & \large{\textbf{University of Toronto}} September 2016 - Present\\
-                  & Bachelor of Science, \textbf{Computer Science Specialist} \\
-                  & \\
+\Large{Experience}
+& \textbf{Software Engineer} at \textbf{Garner} \hspace*{\fill} November 2018 - Present \\
+& \tabitem Practiced \textbf{GitOps} for continuous deployment using \textbf{ArgoCD} \\
+& \tabitem Introduced \textbf{functional programming}, planned weekly study sessions to onboard team members \\
+& \tabitem Migrated production environment from systemd services on manually managed VMs to \textbf{Kubernetes} \\
+& \tabitem Developed infrastructure as code project from scratch using \textbf{Terraform} \\
+& \tabitem Optimized DB result parsing to be 2000x faster by reducing the runtime complexity from $\mathcal{O}(n^3)$ to $\mathcal{O}(n\log{}n)$ \\
+& \\
 \Large{Skills}
-& \large{\textbf{Technology}} \\
+& \textbf{Proficient}: Scala, Python, Docker, Terraform, Google Cloud Platform, Linux, Kubernetes, TypeScript, JavaScript, Angular, Java, Jenkins \\
+& \textbf{Familiar}: Haskell, Rust, Vue.js, C\#, AWS, C \\
 & \\
-& \textbf{Expert}: I am able to onboard new team members with these technologies: \\
-& \vspace{0.2cm} \tabitem \texttt{Scala, Python, Docker, Terraform, Google Cloud Platform, Linux} \\
-& \textbf{Proficient}: I am able to be immediately productive with these technologies: \\
-& \vspace{0.2cm} \tabitem \texttt{Kubernetes, TypeScript, JavaScript, Angular, Java, Jenkins} \\
-& \textbf{Familiar}: I am able to pick up these technologies relativity quickly: \\
-& \vspace{0.2cm} \tabitem \texttt{Haskell, Vue.js, C\#, AWS, C} \\
-& \\
-& \large{\textbf{Other}} \\
-& \begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt]
-      \setlength\itemsep{0em}
-      \item Architecting software systems using domain-driven and service oriented principles
-      \item Developing continuous deployment workflows to Kubernetes in a production environment
-      \item Making decisions to direct team members in the right direction
-      \item Administrating Unix-like operating systems, have knowledge of the OSI network model
-      \item Writing technical documentation and producing infrastructure diagrams
-      \item Solid understanding of data structures and algorithms
-      \item Knowledgeable in agile (XP, Kanban, and Scrum)
-\end{itemize} \\
-\pagebreak
-\Large{Employment}
-& \large{\textbf{Garner}} November 2018 - Present\\
-& Software Developer
-\begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt]
-      \setlength\itemsep{0em}
-      \item Practiced \textbf{GitOps} for continuous deployment using \textbf{ArgoCD}
-      \item Evangelized \textbf{functional programming}, planned weekly study sessions to onboard team members
-      \item Migrated production environment from systemd services on manually managed VMs to \textbf{Kubernetes}
-      \item Developed infrastructure as code project from scratch using \textbf{Terraform}
-      \item Optimized DB result parsing to be 2000x faster by reducing the runtime complexity from $\mathcal{O}(n^3)$ to $\mathcal{O}(n\log{}n)$
-\end{itemize} \\
 \Large{Projects}
-& \textbf{Open Source Project} Personal Website  \\
-& \smallurl{https://gitlab.otonokizaka.moe/Umi/peijun.dev} \\
-& \tabitem Built a personal website using \textbf{Vue.js} \\
-& \tabitem Published the website as a \textbf{Docker} image using GitLab CI \\
-& \tabitem Deployed the website automatically using \textbf{GitLab CI} \\
-& \\
 & \textbf{Open Source Project} Cloudflare DDNS \\
 & \smallurl{https://github.com/MaT1g3R/cloudflare-ddns} \\
 & \tabitem Purposed Cloudflare's DNS service as dynamic DNS using \textbf{Terraform} \\
-& \\
 & \textbf{Open Source Project} Office hour scheduler \\
 & \smallurl{https://github.com/office-hour-scheduler/ohs} \\
 & \tabitem Collaborated with several other developers to build a webapp for scheduling office hours with professors \\
 & \tabitem Designed the backend using \textbf{domain-driven} design principles \\
 & \tabitem Implemented the backend API using \textbf{GraphQL} \\
 & \tabitem Built the artifact as a Docker image in CI \\
-& \\
 & \textbf{Open Source Project} Python Library \\
 & \smallurl{https://github.com/MaT1g3R/option} \\
 & \tabitem Implemented a library to bring Rust-like Optional types to Python \\
 & \tabitem Integrated automated testing and deployment using Travis CI and codecov \\
 & \tabitem Published the library automatically to PyPi using the CI pipeline \\
-& \\
-& \textbf{Open source Project} chat bot \\
+& \textbf{Open source Project} Chat bot \\
 & \smallurl{https://github.com/MaT1g3R/YasenBaka} \\
 & \tabitem Created a chat bot serving 1000+ chat rooms at its peak \\
 & \tabitem Explored asynchronous programming using the \textbf{asyncio} library \\
 & \tabitem Deployed the application using Docker to \textbf{AWS} \\
 & \\
-& \textbf{Open Source Project} Music Player \\
-& \smallurl{https://github.com/MaT1g3R/musicview} \\
-& \tabitem Designed a music player that discovers the least played songs for the user \\
-& \tabitem Created a simple UI using ncurses \\
-& \tabitem Synchronized between different threads using locks and condition variables \\
-& \\
-& \textbf{Course Project} ext2 file system, University of Toronto \\
-& \tabitem Implemented a ext2 file system from scratch using C \\
-& \tabitem Debugged the program using GDB, valgrind, and CLion \\
-& \tabitem Experimented with the CMake build system \\
+\Large{Education} & \large{\textbf{University of Toronto}} September 2016 - Present\\
+                  & Bachelor of Science, \textbf{Computer Science Specialist} \\
 \end{longtable}
 \end{document}
