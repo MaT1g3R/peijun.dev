@@ -1,10 +1,15 @@
-.PHONY: cv
+.PHONY: cv resume clean
 
 cv:
-	pp -import variables.pp cv.tex > cv-compiled.tex
-	xelatex cv-compiled.tex
-	pandoc -f latex -t html cv-compiled.tex > cv.html
-	mv cv-compiled.pdf cv.pdf
-	rm cv-compiled.*
+	xelatex cv.tex
+	pandoc -f latex -t html cv.tex > cv.html
 	mv cv.html ../../public/static/peijun-ma-cv.html
 	mv cv.pdf ../../public/static/peijun-ma-cv.pdf
+	make clean
+
+resume:
+	xelatex resume.tex
+	make clean
+
+clean:
+	rm *.aux *.out *.log
