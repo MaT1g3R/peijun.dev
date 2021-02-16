@@ -3,105 +3,157 @@
 \usepackage{setspace}
 \usepackage{hyperref}
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 \usepackage{longtable}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{enumitem}
 \usepackage[left=1in, right=1in, bottom=1in, top=1.25in]{geometry}
+\usepackage{fontspec} % custom fonts
+\usepackage{titlesec}
 \pagenumbering{arabic}
+
+\setmainfont[
+    Path=/usr/share/fonts/TTF/,
+    BoldFont=Roboto-Bold.ttf,
+    ItalicFont=Roboto-Italic.ttf,
+    BoldItalicFont=Roboto-BoldItalic.ttf
+]{Roboto-Light.ttf}
+
+\newfontfamily\regular[
+    Path = /usr/share/fonts/TTF/
+]{Roboto-Regular.ttf}
+
+\newfontfamily\light[
+    Path = /usr/share/fonts/TTF/
+]{Roboto-Light.ttf}
+
+\newfontfamily\thin[
+    Path = /usr/share/fonts/TTF/
+]{Roboto-Thin.ttf}
+
+\newfontfamily\regularheader[
+    Path = /usr/share/fonts/TTF/
+]{Roboto-Regular.ttf}
+
+\newfontfamily\thinheader[
+    Path = /usr/share/fonts/TTF/
+]{Roboto-Thin.ttf}
+
+\newfontfamily\mediumheader[
+    Path = /usr/share/fonts/TTF/
+]{Roboto-Medium.ttf}
+
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{}
-\lhead{\large{\textbf{Peijun Ma}}}
+\chead{\LARGE{\textbf{Peijun Ma}} \\ \small \href{mailto:peijun.ma@pm.me}{peijun.ma@pm.me} | (902)-719-8619 | \href{https://peijun.dev}{https://peijun.dev}}
 
-\newcommand{\smallurl}[1]{\small{\url{#1}}}
+\newcommand{\smallurl}[1]{\footnotesize{\url{#1}}\normalsize}
+
+\titlespacing*{\section}{0pt}{1.0ex}{0.5ex}
+\titlespacing*{\subsection}{0pt}{0.7ex}{0.3ex}
+\titlespacing*{\subsubsection}{0pt}{0.5ex}{0.2ex}
 
 \begin{document}
 
-\begin{tabular}{l l}
-    Email: & \href{mailto:peijun.ma@pm.me}{peijun.ma@pm.me} \\
-    Phone: & (902)-719-8619 \\
-    Website: & \href{https://peijun.dev}{https://peijun.dev}
-\end{tabular}
-
-\noindent \begin{longtable}{@{} l p{14cm}}
-\Large{Education} & \large{\textbf{University of Toronto}} September 2016 - Present\\
-                  & Bachelor of Science, \textbf{Computer Science Specialist} \\
-                  & \\
-\Large{Skills}
-& \large{\textbf{Technology}} \\
-& \\
-& \textbf{Expert}: I am able to onboard new team members with these technologies: \\
-& \vspace{0.2cm} \tabitem \texttt{Scala, Python, Docker, Terraform, Google Cloud Platform, Linux} \\
-& \textbf{Proficient}: I am able to be immediately productive with these technologies: \\
-& \vspace{0.2cm} \tabitem \texttt{Kubernetes, TypeScript, JavaScript, Angular, Java, Jenkins} \\
-& \textbf{Familiar}: I am able to pick up these technologies relativity quickly: \\
-& \vspace{0.2cm} \tabitem \texttt{Haskell, Vue.js, C\#, AWS, C} \\
-& \\
-& \large{\textbf{Other}} \\
-& \begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt]
+\section*{Skills}
+\subsection*{Technology}
+\subsubsection*{Expert}
+I am able to onboard new team members with these technologies:\\
+\texttt{Scala}, \texttt{Python}, \texttt{Docker}, \texttt{Terraform}, \texttt{Google Cloud Platform}, \texttt{Linux}
+\subsubsection*{Proficient}
+I am able to be immediately productive with these technologies:\\
+\texttt{Kubernetes}, \texttt{TypeScript}, \texttt{Angular}, \texttt{Java}, \texttt{Jenkins}
+\subsubsection*{Familiar}
+I am able to pick up these technologies relativity quickly:\\
+\texttt{Haskell}, \texttt{Rust}, \texttt{Vus.js}, \texttt{C\#}, \texttt{AWS}, \texttt{C}
+\subsection*{Other}
+\begin{itemize}
       \setlength\itemsep{0em}
       \item Architecting software systems using domain-driven and service oriented principles
       \item Developing continuous deployment workflows to Kubernetes in a production environment
-      \item Making decisions to direct team members in the right direction
       \item Administrating Unix-like operating systems, have knowledge of the OSI network model
       \item Writing technical documentation and producing infrastructure diagrams
       \item Solid understanding of data structures and algorithms
       \item Knowledgeable in agile (XP, Kanban, and Scrum)
-\end{itemize} \\
-\pagebreak
-\Large{Employment}
-& \large{\textbf{Garner}} November 2018 - Present\\
-& Software Developer
-\begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt]
+\end{itemize}
+
+\section*{Experience}
+\subsection*{Garner Distributed Workflow}
+Software engineer | November 2018 -- Present
+\begin{itemize}
       \setlength\itemsep{0em}
       \item Practiced \textbf{GitOps} for continuous deployment using \textbf{ArgoCD}
-      \item Evangelized \textbf{functional programming}, planned weekly study sessions to onboard team members
+      \item Introduced \textbf{functional programming}, planned weekly study sessions to onboard team members
       \item Migrated production environment from systemd services on manually managed VMs to \textbf{Kubernetes}
       \item Developed infrastructure as code project from scratch using \textbf{Terraform}
       \item Optimized DB result parsing to be 2000x faster by reducing the runtime complexity from $\mathcal{O}(n^3)$ to $\mathcal{O}(n\log{}n)$
-\end{itemize} \\
-\Large{Projects}
-& \textbf{Open Source Project} Personal Website  \\
-& \smallurl{https://gitlab.otonokizaka.moe/Umi/peijun.dev} \\
-& \tabitem Built a personal website using \textbf{Vue.js} \\
-& \tabitem Published the website as a \textbf{Docker} image using GitLab CI \\
-& \tabitem Deployed the website automatically using \textbf{GitLab CI} \\
-& \\
-& \textbf{Open Source Project} Cloudflare DDNS \\
-& \smallurl{https://github.com/MaT1g3R/cloudflare-ddns} \\
-& \tabitem Purposed Cloudflare's DNS service as dynamic DNS using \textbf{Terraform} \\
-& \\
-& \textbf{Open Source Project} Office hour scheduler \\
-& \smallurl{https://github.com/office-hour-scheduler/ohs} \\
-& \tabitem Collaborated with several other developers to build a webapp for scheduling office hours with professors \\
-& \tabitem Designed the backend using \textbf{domain-driven} design principles \\
-& \tabitem Implemented the backend API using \textbf{GraphQL} \\
-& \tabitem Built the artifact as a Docker image in CI \\
-& \\
-& \textbf{Open Source Project} Python Library \\
-& \smallurl{https://github.com/MaT1g3R/option} \\
-& \tabitem Implemented a library to bring Rust-like Optional types to Python \\
-& \tabitem Integrated automated testing and deployment using Travis CI and codecov \\
-& \tabitem Published the library automatically to PyPi using the CI pipeline \\
-& \\
-& \textbf{Open source Project} chat bot \\
-& \smallurl{https://github.com/MaT1g3R/YasenBaka} \\
-& \tabitem Created a chat bot serving 1000+ chat rooms at its peak \\
-& \tabitem Explored asynchronous programming using the \textbf{asyncio} library \\
-& \tabitem Deployed the application using Docker to \textbf{AWS} \\
-& \\
-& \textbf{Open Source Project} Music Player \\
-& \smallurl{https://github.com/MaT1g3R/musicview} \\
-& \tabitem Designed a music player that discovers the least played songs for the user \\
-& \tabitem Created a simple UI using ncurses \\
-& \tabitem Synchronized between different threads using locks and condition variables \\
-& \\
-& \textbf{Course Project} ext2 file system, University of Toronto \\
-& \tabitem Implemented a ext2 file system from scratch using C \\
-& \tabitem Debugged the program using GDB, valgrind, and CLion \\
-& \tabitem Experimented with the CMake build system \\
-\end{longtable}
+\end{itemize}
+
+\section*{Projects}
+
+\subsection*{Personal website \hfill \normalfont{Open Source project}}
+\smallurl{https://gitlab.otonokizaka.moe/Umi/peijun.dev}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Built a personal website using \textbf{Vue.js}
+      \item Published the website as a \textbf{Docker} image using GitLab CI
+      \item Deployed the website automatically using \textbf{GitLab CI}
+\end{itemize}
+
+\subsection*{Cloudflare DDNS \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/MaT1g3R/cloudflare-ddns}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Purposed Cloudflare's DNS service as dynamic DNS using \textbf{Terraform}
+\end{itemize}
+
+\subsection*{Office hour scheduler \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/office-hour-scheduler/ohs}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Collaborated with several other developers to build a webapp for scheduling office hours with professors
+      \item Designed the backend using \textbf{domain-driven} design principles
+      \item Implemented the backend API using \textbf{GraphQL}
+      \item Built the artifact as a Docker image in CI
+\end{itemize}
+
+\subsection*{Option (Python Library) \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/MaT1g3R/option}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Implemented a library to bring Rust-like Optional types to Python
+      \item Integrated automated testing and deployment using Travis CI and codecov
+      \item Published the library automatically to PyPi using the CI pipeline
+\end{itemize}
+
+\subsection*{Chat bot \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/MaT1g3R/YasenBaka}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Created a chat bot serving 1000+ chat rooms at its peak
+      \item Explored asynchronous programming using the \textbf{asyncio} library
+      \item Deployed the application using Docker to \textbf{AWS}
+\end{itemize}
+
+\subsection*{Music player \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/MaT1g3R/musicview}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Designed a music player that discovers the least played songs for the user
+      \item Created a simple UI using ncurses
+      \item Synchronized between different threads using locks and condition variables
+\end{itemize}
+
+\subsection*{ext2 file system \hfill \normalfont{Course project, University of Toronto}}
+\begin{itemize}
+      \setlength\itemsep{0em}
+      \item Implemented a ext2 file system from scratch using C
+      \item Debugged the program using GDB, valgrind, and CLion
+      \item Experimented with the CMake build system
+\end{itemize}
+
+\section*{Education}
+\subsection*{University of Toronto \hfill \normalfont{September 2016 -- April 2021}}
+Bachelor of Science, \textbf{Computer Science Specialist}
 \end{document}

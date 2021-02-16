@@ -9,6 +9,7 @@
 \usepackage{enumitem}
 \usepackage[left=1in, right=1in, bottom=1in, top=1.25in]{geometry}
 \usepackage{fontspec} % custom fonts
+\usepackage{titlesec}
 \pagenumbering{arabic}
 
 \setmainfont[
@@ -45,71 +46,59 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{}
-\lhead{\large{\textbf{Peijun Ma}}}
+\chead{\LARGE{\textbf{Peijun Ma}} \\ \small \href{mailto:peijun.ma@pm.me}{peijun.ma@pm.me} | (902)-719-8619 | \href{https://peijun.dev}{https://peijun.dev}}
 
-\newcommand{\smallurl}[1]{\scriptsize{\url{#1}}}
-\newcommand{\tabitem}{\hspace{0.2cm}\textbullet\hspace{0.2cm}}
+\newcommand{\smallurl}[1]{\footnotesize{\url{#1}}\normalsize}
+
+\titlespacing*{\section}{0pt}{1.0ex}{0.5ex}
+\titlespacing*{\subsection}{0pt}{0.7ex}{0.3ex}
+\titlespacing*{\subsubsection}{0pt}{0ex}{0ex}
 
 \begin{document}
-\begin{tabular}{l l}
-    Email: & \href{mailto:peijun.ma@pm.me}{peijun.ma@pm.me} \\
-    Phone: & (902)-719-8619 \\
-    Website: & \href{https://peijun.dev}{https://peijun.dev}
-\end{tabular}
 
-\noindent \begin{longtable}{@{} l p{14cm}}
-\Large{Experience}
-& \textbf{Garner Distributed Workflow}, Software Engineer \hspace*{\fill} November 2018 -- Present \\
-& \tabitem
-Practiced \textbf{GitOps} for continuous deployment using \textbf{ArgoCD} \\
-& \tabitem
-Introduced \textbf{functional programming}, planned weekly study sessions to onboard team members \\
-& \tabitem
-Migrated production environment from systemd services on manually managed VMs to \textbf{Kubernetes} \\
-& \tabitem
-Developed infrastructure as code project from scratch using \textbf{Terraform} \\
-& \tabitem
-Optimized DB result parsing to be 2000x faster by reducing the runtime complexity from $\mathcal{O}(n^3)$ to $\mathcal{O}(n\log{}n)$ \\
-& \\
-\Large{Skills}
-& \textbf{Proficient}: Scala, Python, Docker, Terraform, Google Cloud Platform, Linux, Kubernetes, TypeScript, JavaScript, Angular, Java, Jenkins \\
-& \textbf{Familiar}: Haskell, Rust, Vue.js, C\#, AWS, C \\
-& \\
-\Large{Projects}
-& \textbf{Cloudflare DDNS} \hspace*{\fill} Open Source Project \\
-& \smallurl{https://github.com/MaT1g3R/cloudflare-ddns} \\
-& \tabitem
-Purposed Cloudflare's DNS service as dynamic DNS using \textbf{Terraform} \\
-& \textbf{Office hour scheduler}\hspace*{\fill} Open Source Project \\
-& \smallurl{https://github.com/office-hour-scheduler/ohs} \\
-& \tabitem
-Collaborated with several other developers to build a web app for scheduling office hours with professors \\
-& \tabitem
-Designed the backend using \textbf{domain-driven} design principles \\
-& \tabitem
-Implemented the backend API using \textbf{GraphQL} \\
-& \tabitem Built the artifact as a Docker image in CI \\
-& \textbf{Python Library}\hspace*{\fill} Open Source Project \\
-& \smallurl{https://github.com/MaT1g3R/option} \\
-& \tabitem
-Implemented a library to bring Rust-like Optional types to Python \\
-& \tabitem
-Integrated automated testing and deployment using Travis CI and codecov \\
-& \tabitem Published the library automatically to PyPi using the CI pipeline \\
-& \textbf{Chat bot}\hspace*{\fill} Open source Project \\
-& \smallurl{https://github.com/MaT1g3R/YasenBaka} \\
-& \tabitem
-Created a chat bot serving 1000+ chat rooms at its peak \\
-& \tabitem
-Explored asynchronous programming using the \textbf{asyncio} library \\
-& \tabitem
-Deployed the application using \textbf{Docker} to \textbf{AWS} \\
-\Large{Education}
-& \textbf{University of Toronto} \hspace*{\fill} September 2016 -- April 2021 \\
-& \tabitem
-Bachelor of Science, \textbf{Computer Science Specialist} \\
-& \tabitem
-GPA 3.25/4.0
-\end{longtable}
+\section*{Experience}
+\subsection*{Garner Distributed Workflow \hfill \normalfont{November 2018 -- Present}}
+Software engineer
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Practiced \textbf{GitOps} for continuous deployment using \textbf{ArgoCD}
+    \item Introduced \textbf{functional programming}, planned weekly study sessions to onboard team members
+    \item Migrated production environment from systemd services on manually managed VMs to \textbf{Kubernetes}
+    \item Developed infrastructure as code project from scratch using \textbf{Terraform}
+    \item Optimized DB result parsing to be 2000x faster by reducing the runtime complexity from $\mathcal{O}(n^3)$ to $\mathcal{O}(n\log{}n)$
+\end{itemize}
+
+\section*{Skills}
+\large{}
+\textbf{Proficient}:
+\texttt{Scala}, \texttt{Python}, \texttt{Docker}, \texttt{Terraform}, \texttt{Google Cloud Platform}, \texttt{Linux},
+\texttt{Kubernetes}, \texttt{TypeScript}, \texttt{Angular}, \texttt{Java}, \texttt{Jenkins} \\
+\textbf{Familiar}:
+\texttt{Haskell}, \texttt{Rust}, \texttt{Vus.js}, \texttt{C\#}, \texttt{AWS}, \texttt{C}
+\normalsize{}
+
+\section*{Projects}
+
+\subsection*{Office hour scheduler \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/office-hour-scheduler/ohs}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Collaborated with several other developers to build a webapp for scheduling office hours with professors
+    \item Designed the backend using \textbf{domain-driven} design principles
+    \item Implemented the backend API using \textbf{GraphQL}
+    \item Built the artifact as a Docker image in CI
+\end{itemize}
+
+\subsection*{Chat bot \hfill \normalfont{Open Source project}}
+\smallurl{https://github.com/MaT1g3R/YasenBaka}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Created a chat bot serving 1000+ chat rooms at its peak
+    \item Explored asynchronous programming using the \textbf{asyncio} library
+    \item Deployed the application using Docker to \textbf{AWS}
+\end{itemize}
+
+\section*{Education}
+\subsection*{University of Toronto \hfill \normalfont{September 2016 -- April 2021}}
+Bachelor of Science, \textbf{Computer Science Specialist}
 \end{document}
