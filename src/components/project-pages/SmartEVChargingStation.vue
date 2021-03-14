@@ -78,15 +78,6 @@
         latest version of the application will always run in a production or
         production-like environments, making it easy to catch defects early.
       </p>
-      <h2 class="text-h4">What I learned</h2>
-      <ul class="text-body-1">
-        <li>
-          How to write a project requirements document
-        </li>
-        <li>
-          How to break down tasks into digestible chunks
-        </li>
-      </ul>
     </v-container>
   </div>
 </template>
