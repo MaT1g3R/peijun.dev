@@ -3,7 +3,7 @@
     <v-container class="home">
       <p class="text-center display-3">Hi there, my name is Peijun</p>
       <p class="text-center headline">
-        I'm software developer/SRE based in Toronto.
+        I'm a software engineer/SRE based in Toronto.
       </p>
       <v-container id="links" fluid>
         <v-row align="center" justify="center">
