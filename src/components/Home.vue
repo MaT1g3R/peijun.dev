@@ -3,7 +3,7 @@
     <v-container class="home">
       <p class="text-center display-3">Hi there, my name is Peijun</p>
       <p class="text-center headline">
-        I'm a software engineer/SRE based in Toronto.
+        I'm a Software Engineer/SRE based in Toronto.
       </p>
       <v-container id="links" fluid>
         <v-row align="center" justify="center">
@@ -35,10 +35,10 @@
         <div>
           <h3 class="title">About Me</h3>
           <p>
-            I am currently finishing my undergrad in computer science at
-            <a href="https://web.cs.toronto.edu/">University of Toronto</a>, and
-            work as a software developer at
-            <a href="https://garnercorp.io">Garner</a>.
+            I currently work at <a href="https://circleci.com/">CircleCI</a>,
+            and graduated from
+            <a href="https://web.cs.toronto.edu/">University of Toronto</a>
+            with a BSc in computer science.
           </p>
           <p>
             One of my main hobbies is learning about new things, especially
