@@ -86,8 +86,7 @@
             due to the fact that it respects the user's
             <a href="https://www.gnu.org/philosophy/free-sw.html">freedom</a>.
             Linux also makes me a much more productive developer. My current
-            distro of choice is
-            <a href="https://manjaro.org/">Manjaro Linux</a>.
+            distro of choice is <a href="https://archlinux.org/">Arch Linux</a>.
           </p>
           <p>
             Linux has introduced me to system administration, which later lead
