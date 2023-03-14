@@ -35,8 +35,9 @@
         <div>
           <h3 class="title">About Me</h3>
           <p>
-            I currently work at <a href="https://circleci.com/">CircleCI</a>,
-            and graduated from
+            I currently work at
+            <a href="https://www.thumbtack.com/">Thumbtack</a>, and graduated
+            from
             <a href="https://web.cs.toronto.edu/">University of Toronto</a>
             with a BSc in computer science.
           </p>
